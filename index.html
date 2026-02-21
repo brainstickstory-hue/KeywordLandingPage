@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>계절성 키워드 모음집 사전 예약</title>
+
+  <!-- GA4 추적 코드 (YOUR_GA4_ID를 실제 측정 ID로 교체) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4GDHDGMLYC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4GDHDGMLYC');
+  </script>
+
+  <!-- Microsoft Clarity 추적 코드 (YOUR_CLARITY_ID를 실제 ID로 교체) -->
+  <script>
+    (function(c, l, a, r, i, t, y) {
+      c[a] = c[a] || function() { (c[a].q = c[a].q || []).push(arguments); };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "vku775i7i9");
+  </script>
+
+  <style>
+    /* 기본 초기화 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #ffffff;
+    }
+  /* 이미지 레이아웃 */
+    main {
+      display: block;
+      width: 100%;
+    }
+
+    main img {
+      display: block;  /* 이미지 사이 불필요한 여백 제거 */
+      width: 100%;
+      height: auto;
+    }
+  /* 플로팅 CTA 버튼 */
+    #floating-btn {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #e8401c;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 16px 40px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+      white-space: nowrap;
+    }
+
+    #floating-btn:hover {
+      background-color: #c73518;
+    }
+  /* 모달 배경 */
+    #modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 모달 활성화 시 */
+    #modal-overlay.active {
+      display: flex;
+    }
+
+    /* 모달 본체 */
+    #modal-box {
+      position: relative;
+      width: 90%;
+      max-width: 600px;
+      height: 80vh;
+      background-color: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    /* 닫기 버튼 */
+    #modal-close {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333333;
+      cursor: pointer;
+      z-index: 1001;
+      background: none;
+      border: none;
+    }
+
+    /* 구글 폼 iframe */
+    #modal-box iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+ /* 모바일 반응형 (화면 너비 768px 이하) */
+    @media (max-width: 768px) {
+
+      /* 플로팅 버튼 크기 조정 */
+      #floating-btn {
+        font-size: 15px;
+        padding: 14px 28px;
+        bottom: 20px;
+      }
+
+      /* 모달 높이 조정 */
+      #modal-box {
+        height: 90vh;
+      }
+    }
+ /* 플로팅 버튼에 가려지지 않도록 하단 여백 추가 */
+    main {
+      padding-bottom: 80px;
+    }
+/* 상단 이동 버튼 */
+    #scroll-top-btn {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 45px;
+      height: 45px;
+      background-color: #555555;
+      color: #ffffff;
+      font-size: 20px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 998;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #scroll-top-btn:hover {
+      background-color: #333333;
+    }
+</style>
+</head>
+<body>
+
+  <!-- 이미지 콘텐츠 영역 -->
+  <main>
+    <!-- 실제 이미지 파일 준비 후 src를 교체하세요 -->
+    <!-- 예시: src="images/section-01.webp" -->
+    <img src="images/001.jpg" alt="섹션 1" />
+    <img src="images/002.jpg" alt="섹션 2" />
+    <img src="images/003.jpg" alt="섹션 3" />
+  </main>
+<!-- 플로팅 CTA 버튼 -->
+  <button id="floating-btn">🎁 사전 예약 신청하기</button>
+  <!-- 상단 이동 버튼 -->
+  <button id="scroll-top-btn">Top</button>
+  <!-- 모달 -->
+  <div id="modal-overlay">
+    <div id="modal-box">
+      <button id="modal-close">✕</button>
+      <!-- YOUR_FORM_URL을 실제 구글 폼 URL로 교체 -->
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScE8Mt8x4z0RcUbodPf7A2vwxYS0MJmHMZwnTwbvkayWDJKJQ/viewform?embedded=true" title="사전 예약 신청"></iframe>
+    </div>
+  </div>
+<script>
+    const floatingBtn = document.getElementById('floating-btn');
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modalClose = document.getElementById('modal-close');
+
+    // 버튼 클릭 시 모달 열기
+    // 버튼 클릭 시 모달 열기 + GA4 이벤트 전송
+    floatingBtn.addEventListener('click', function () {
+      modalOverlay.classList.add('active');
+      floatingBtn.style.display = 'none';
+
+      // GA4 이벤트 추적 (YOUR_GA4_ID 교체 후 정상 작동)
+      if (typeof gtag === 'function') {
+        gtag('event', 'cta_button_click', {
+          event_category: 'engagement',
+          event_label: '사전 예약 신청하기 버튼 클릭'
+        });
+      }
+    });
+
+    // 닫기 버튼 클릭 시 모달 닫기
+    modalClose.addEventListener('click', function () {
+      modalOverlay.classList.remove('active');
+      floatingBtn.style.display = 'block';
+    });
+
+    // 모달 배경 클릭 시 모달 닫기
+    modalOverlay.addEventListener('click', function (e) {
+      if (e.target === modalOverlay) {
+        modalOverlay.classList.remove('active');
+        floatingBtn.style.display = 'block';
+      }
+    });
+  // 상단 이동 버튼 동작
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
+
+    // 스크롤 300px 이상 내려가면 버튼 표시
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 300) {
+        scrollTopBtn.style.display = 'flex';
+      } else {
+        scrollTopBtn.style.display = 'none';
+      }
+    });
+
+    // 클릭 시 상단으로 이동
+    scrollTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
